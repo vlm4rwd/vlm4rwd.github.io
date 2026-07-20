@@ -1134,13 +1134,13 @@ nav ul li a.active::after {
 
 /* ---------- Contact ---------- */
 .contact-info {
-    max-width: 980px;
+    max-width: 1280px;
     margin: 42px auto 0;
 }
 
 .contact-methods {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 22px;
 }
 
