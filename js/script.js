@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Initialize Vanta.js background effect
+const heroBackground = document.querySelector('#hero-background');
+if (heroBackground && window.VANTA && VANTA.WAVES) {
 const vantaEffect = VANTA.WAVES({
     el: "#hero-background",
     mouseControls: true,
@@ -18,6 +20,7 @@ const vantaEffect = VANTA.WAVES({
     waveSpeed: 0.8,
     zoom: 1.05
 });
+}
 
     // Mobile navigation toggle
     const hamburger = document.querySelector('.hamburger');
