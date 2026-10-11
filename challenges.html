@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VLM4RWD Challenges | NeurIPS 2026</title>
+    <meta name="description" content="Participate in the VLM4RWD 2026 VistaQA Zero-Shot Grounding Challenge and Grounding Failure Challenge at NeurIPS 2026.">
+    <link rel="icon" type="image/png" href="imgs/vlm4rwd_concept.png">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"></script>
+</head>
+<body class="challenges-page">
+<header class="fixed-header">
+    <div class="container">
+        <div class="logo">
+            <a class="logo-container" href="index.html#home">
+                <img src="imgs/vlm4rwd_concept.png" alt="VLM4RWD Logo" class="logo-image">
+                <div class="logo-text">
+                    <h1>VLM4RWD</h1>
+                    <p>NeurIPS 2026 Workshop</p>
+                </div>
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#call">Call for Papers</a></li>
+                <li><a href="challenges.html" class="active">Challenges</a></li>
+                <li><a href="index.html#schedule">Schedule</a></li>
+                <li><a href="index.html#speakers">Speakers</a></li>
+                <li><a href="index.html#organizers">Organizers</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li class="nav-divider"></li>
+                <li><a href="https://mozhgan91.github.io/vlm4rwd-neurips25-ws/" target="_blank" class="previous-edition-link">VLM4RWD 2025</a></li>
+            </ul>
+            <div class="hamburger" aria-label="Open navigation" role="button" tabindex="0">
+                <span></span><span></span><span></span>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="challenge-hero">
+        <div id="hero-background"></div>
+        <div class="container">
+            <h1>Challenge Tracks</h1>
+            <h2>Grounded and Faithful Vision-Language Models for Real-World Deployment.</h2>
+            <p class="challenge-workshop-meta">2nd Workshop on VLM4RWD | NeurIPS 2026 | Dec 11, 2026 | Sydney, Australia</p>
+            <div class="challenge-jump-links">
+                <a href="#vistaqa" class="btn challenge-light"><i class="fas fa-chart-line"></i> VistaQA Challenge</a>
+                <a href="#failure" class="btn challenge-light"><i class="fas fa-magnifying-glass"></i> Grounding Failure Challenge</a>
+                <div style="flex-basis: 100%; height: 0;"></div> 
+                <a href="https://forms.gle/UfwWEej2T27QiGKB9" class="btn primary" target="_blank" rel="noopener noreferrer"> <i class="fas fa-user-group"></i> Track 1: Team Registration </a>
+                <a href="https://openreview.net/group?id=NeurIPS.cc/2026/Workshop/VLM4RWD_Challenges#tab-your-consoles"class="btn challenge-light"target="_blank" rel="noopener noreferrer"> <i class="fas fa-file-lines"></i> Track 1: Submit Report</a>
+                <a href="https://forms.gle/FmWLNch1W1NH8SWJ6" class="btn primary" target="_blank" rel="noopener noreferrer"> <i class="fas fa-upload"></i> Track 2: Submit Failure Case </a>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="challenge-overview">
+        <div class="container">
+            <h2>Explore the Two Challenges</h2>
+            <p>Benchmark complete vision-language systems in a controlled zero-shot evaluation, or help uncover compelling grounding failures that matter for real-world deployment.</p>
+            <div class="challenge-card-grid">
+                <article class="challenge-card challenge-card-primary">
+                    <div class="challenge-card-topline"><span>Challenge 01</span><span class="challenge-badge">Leaderboard</span></div>
+                    <div class="challenge-icon"><i class="fas fa-crosshairs"></i></div>
+                    <h3>VistaQA Zero-Shot Grounding Challenge</h3>
+                    <p>Build and evaluate a VLM or a multimodal pipeline on VistaQA in a zero-shot setting. Custom architectures, training on external data, and tool- or agent-augmented systems are welcome, provided VistaQA is used only for final evaluation.</p>
+                    <div class="challenge-meta">
+                        <span><strong>Setting</strong> Zero-shot</span>
+                        <span><strong>Metric</strong> GROVE</span>
+                        <span><strong>Recognition</strong> Top models</span>
+                    </div>
+                    <a href="#vistaqa" class="challenge-text-link">View challenge details <i class="fas fa-arrow-right"></i></a>
+                </article>
+
+                <article class="challenge-card">
+                    <div class="challenge-card-topline"><span>Challenge 02</span><span class="challenge-badge">Community Track</span></div>
+                    <div class="challenge-icon"><i class="fas fa-triangle-exclamation"></i></div>
+                    <h3>Grounding Failure Challenge</h3>
+                    <p>Submit compelling image or video cases that expose grounding failures in one or more VLMs, especially failures relevant to real-world use.</p>
+                    <div class="challenge-meta">
+                        <span><strong>Input</strong> Image / video</span>
+                        <span><strong>Models</strong> One or more</span>
+                        <span><strong>Recognition</strong> Notable cases</span>
+                    </div>
+                    <a href="#failure" class="challenge-text-link">View challenge details <i class="fas fa-arrow-right"></i></a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="vistaqa" class="challenge-detail-section">
+        <div class="container">
+            <div class="challenge-detail-heading">
+                <div>
+                    <span class="challenge-kicker">Challenge 01</span>
+                    <h2>VistaQA Zero-Shot Challenge</h2>
+                </div>
+                <span class="challenge-number">01</span>
+            </div>
+
+            <div class="challenge-detail-layout">
+                <div class="challenge-detail-main">
+                    <p class="challenge-lead">How well can a VLM answer correctly <em>and</em> ground its answers in the right visual evidence when evaluated zero-shot on VistaQA?</p>
+                    <p>Participants may develop any vision-language model or system and evaluate it on <a href="https://vistaqa.github.io/" target="_blank" rel="noopener">VistaQA</a> in a zero-shot setting. Training or fine-tuning on datasets other than VistaQA is allowed, and systems may use custom architectures, external tools, retrieval components, agents, or other inference-time methods. The challenge uses the official VistaQA evaluation protocol, with GROVE as the primary metric for jointly assessing answer correctness and visual grounding.</p>
+
+                    <h3>How to participate</h3>
+                    <ol class="challenge-steps">
+                        <li><span>1</span><div><strong>Register your team</strong><p>Complete the team registration form once per participating team by October 31, 2026.</p></div></li>
+                        <li><span>2</span><div><strong>Build your system</strong><p>Use any model architecture, external training data, tools, agents, retrieval, or inference strategy, as long as VistaQA is not used for training, fine-tuning, or development.</p></div></li>
+                        <li><span>3</span><div><strong>Generate predictions</strong><p>Produce answers and visual evidence predictions using the official format.</p></div></li>
+                        <li><span>4</span><div><strong>Submit a system report through OpenReview</strong><p> Submit a system report describing your model or system, training data, external tools, agents, retrieval components, prompting strategy, and any other components used to produce the results. The report should also include links to your submitted evaluation results and, where available, the model, checkpoint, code repository, or system implementation.</p></div></li>
+                    </ol>
+
+                    <div class="challenge-rule-box">
+                        <i class="fas fa-shield-halved"></i>
+                        <div><strong>Zero-shot requirement</strong><p>VistaQA samples, labels, masks, or derived annotations may not be used for model training, fine-tuning, prompt optimization, model selection, hyperparameter tuning, or any other development step. Training and fine-tuning on external datasets are allowed. Participants may use custom model architectures, external tools, agents, retrieval systems, and other components, but must clearly disclose the complete system and all external resources used in their submission report. VistaQA is reserved for final evaluation only.</p></div>
+                    </div>
+
+                    <div class="challenge-rule-box report-box">
+                        <i class="fas fa-file-lines"></i>
+
+                        <div>
+                            <strong class="report-box-title"> System Report Requirements</strong>
+
+                            <p> Each participating team must submit a system report through OpenReview by November 15, 2026. The report should be written in the workshop paper format and may be up to 4 pages, excluding references and appendix.
+                            </p>
+
+                            <p>The report should clearly describe the complete system used to produce the submitted VistaQA results, including:</p>
+
+                            <ul class="challenge-rule-list">
+                                <li>Team name and participating authors.</li>
+                                <li>Model or system architecture and any training or fine-tuning performed.</li>
+                                <li>External datasets and resources used.</li>
+                                <li>Prompting strategies, external tools, agents, retrieval components, and other inference-time methods.</li>
+                                <li>Final VistaQA results submitted for the leaderboard.</li>
+                                <li>A link to the prediction and evaluation results used for verification.</li>
+                                <li>Links to the model, checkpoint, code repository, or system implementation, where available.</li>
+                                <li>Sufficient implementation and evaluation details to understand and reproduce the submitted approach.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <aside class="challenge-sidebar">
+                    <div class="challenge-facts">
+                        <h3>At a glance</h3>
+                        <dl>
+                            <div><dt>Benchmark</dt><dd>VistaQA</dd></div>
+                            <div><dt>Setting</dt><dd>Zero-shot evaluation</dd></div>
+                            <div><dt>Output</dt><dd>Answer + visual evidence</dd></div>
+                            <div><dt>Primary metric</dt><dd>GROVE</dd></div>
+                            <div><dt>Training on VistaQA</dt><dd>Not permitted</dd></div>
+                            <div><dt>Registeration deadline</dt><dd>October 31, 2026</dd></div>
+                            <div><dt>Challenge deadline</dt><dd>November 15, 2026</dd></div>
+                        </dl>
+                    </div>
+                    <div class="challenge-actions">
+                        <!-- Replace the registration URL below with your VistaQA team registration form. -->
+                        <a href="https://forms.gle/UfwWEej2T27QiGKB9" class="btn primary" target="_blank" rel="noopener noreferrer">
+                        Team Registration</a>
+                          <a href="https://openreview.net/group?id=NeurIPS.cc/2026/Workshop/VLM4RWD_Challenges#tab-your-consoles"
+                            class="btn primary"
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            Submit System Report
+                            </a>
+                        <a href="https://vistaqa.github.io/" target="_blank" rel="noopener" class="btn secondary">VistaQA Website</a>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <section id="failure" class="challenge-detail-section challenge-detail-alt">
+        <div class="container">
+            <div class="challenge-detail-heading">
+                <div>
+                    <span class="challenge-kicker">Challenge 02</span>
+                    <h2>Grounding Failure Challenge</h2>
+                </div>
+                <span class="challenge-number">02</span>
+            </div>
+
+            <div class="challenge-detail-layout">
+                <div class="challenge-detail-main">
+                    <p class="challenge-lead">Show us where today’s VLMs fail to connect their responses to the right visual evidence.</p>
+                    <p>We invite researchers to submit compelling real-world instances revealing grounding failures in vision-language models. We especially welcome cases that are surprising, systematic, practically important, or reveal risks relevant to real-world deployment.</p>
+
+                    <h3>What to submit</h3>
+                    <div class="submission-grid">
+                        <div><i class="fas fa-photo-film"></i><strong>Media</strong><p>An image, short video, screenshots, and one-page PDF.</p></div>
+                        <div><i class="fas fa-comment-dots"></i><strong>Prompt</strong><p>The prompt or question used to elicit the failure.</p></div>
+                        <div><i class="fas fa-cubes"></i><strong>Models</strong><p>Affected model family/families and exact versions where available.</p></div>
+                        <div><i class="fas fa-bug"></i><strong>Failure description</strong><p>A concise explanation of what was grounded incorrectly and why the case matters.</p></div>
+                    </div>
+
+                    <h3>What makes a strong submission?</h3>
+                    <div class="criteria-list">
+                        <div><span>01</span><p><strong>Clear.</strong> The grounding failure is easy to understand and supported by the submitted evidence.</p></div>
+                        <div><span>02</span><p><strong>Insightful.</strong> The case reveals something meaningful about how current VLMs fail.</p></div>
+                        <div><span>03</span><p><strong>Relevant.</strong> The failure has implications for real-world use, reliability, or safety.</p></div>
+                        <div><span>04</span><p><strong>Reproducible.</strong> Stronger cases may recur across runs, prompts, or multiple models.</p></div>
+                    </div>
+
+                    <div class="challenge-rule-box">
+                        <i class="fas fa-award"></i>
+                        <div><strong>Recognition at VLM4RWD 2026</strong><p>Selected and notable grounding failure cases will be highlighted and recognized during the workshop. </p></div>
+                    </div>
+                </div>
+
+                <aside class="challenge-sidebar">
+                    <div class="challenge-facts">
+                        <h3>At a glance</h3>
+                        <dl>
+                            <div><dt>Format</dt><dd>Failure-case submission</dd></div>
+                            <div><dt>Media</dt><dd>Image / short video / PDF</dd></div>
+                            <div><dt>Models</dt><dd>One or more VLMs</dd></div>
+                            <div><dt>Ranking</dt><dd>No numeric leaderboard</dd></div>
+                            <div><dt>Recognition</dt><dd>Selected notable cases</dd></div>
+                            <div><dt>Challenge deadline</dt><dd>November 15, 2026</dd></div>
+                        </dl>
+                    </div>
+                    <div class="challenge-actions">
+                        <!-- Replace the URL below with your Grounding Failure Challenge Google Form. -->
+                        <a href="https://forms.gle/FmWLNch1W1NH8SWJ6" class="btn primary" target="_blank" rel="noopener noreferrer"> Submit a Failure Case</a>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <section class="challenge-dates-section">
+        <div class="container">
+            <h2>Important Dates</h2>
+            <p>Challenge submission deadlines and result announcement dates will be posted here. All deadlines will follow Anywhere on Earth (AoE) unless otherwise stated.</p>
+            <div class="challenge-date-row">
+                <div><i class="fas fa-flag-checkered"></i><span>Challenge launch</span><strong>October 11, 2026</strong></div>
+                <div><i class="fas fa-hourglass-half"></i><span>Submission deadline</span><strong>November 15, 2026</strong></div>
+                <div><i class="fas fa-bullhorn"></i><span>Results / selections</span><strong>To be announced</strong></div>
+                <div><i class="fas fa-calendar-day"></i><span>Workshop recognition</span><strong>December 11, 2026</strong></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="challenge-contact-section">
+        <div class="container challenge-contact-card">
+            <div>
+                <span class="challenge-kicker">Questions?</span>
+                <h2>Challenge inquiries</h2>
+                <p>For questions about eligibility, evaluation, or submissions, please contact the VLM4RWD organizing team.</p>
+            </div>
+            <a href="index.html#contact" class="btn primary">Contact Organizers</a>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-logo"><h3>VLM4RWD Workshop</h3><p>NeurIPS 2026 | Dec 11th | Sydney, Australia</p></div>
+            <div class="footer-links"><ul>
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#call">Call for Papers</a></li>
+                <li><a href="challenges.html">Challenges</a></li>
+                <li><a href="index.html#schedule">Schedule</a></li>
+                <li><a href="index.html#organizers">Organizers</a></li>
+            </ul></div>
+            <div class="footer-contact"><p><strong>Contact:</strong></p><p>Mozhgan Nasr <a href="mailto:mnasraza@uwaterloo.ca">mnasraza@uwaterloo.ca</a></p><p>Yimu Wang <a href="mailto:yimu.wang@uwaterloo.ca">yimu.wang@uwaterloo.ca</a></p></div>
+        </div>
+        <div class="copyright"><p>&copy; NeurIPS 2026 VLM4RWD Workshop. All rights reserved.</p></div>
+    </div>
+</footer>
+<script src="js/script.js"></script>
+</body>
+</html>
