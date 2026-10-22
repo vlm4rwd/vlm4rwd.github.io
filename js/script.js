@@ -1,4 +1,48 @@
 document.addEventListener('DOMContentLoaded', function () {
+    // Keep the existing Challenges page navigation in sync with the 2026 site.
+    // This runs before mobile-nav event handlers are attached.
+    if (document.body.classList.contains('challenges-page')) {
+        const menu = document.querySelector('.fixed-header nav ul');
+        if (menu) {
+            const links = [
+                ['index.html#home', 'Home'],
+                ['index.html#about', 'About'],
+                ['index.html#call', 'Call for Papers'],
+                ['challenges.html', 'Challenges'],
+                ['papers.html', 'Accepted Papers'],
+                ['index.html#schedule', 'Schedule'],
+                ['index.html#speakers', 'Speakers'],
+                ['index.html#organizers', 'Organizers'],
+                ['committee.html', 'Committee'],
+                ['index.html#contact', 'Contact']
+            ];
+            menu.replaceChildren();
+            for (const [href, label] of links) {
+                const li = document.createElement('li');
+                const a = document.createElement('a');
+                a.href = href;
+                a.textContent = label;
+                if (href === 'challenges.html') {
+                    a.className = 'active';
+                    a.setAttribute('aria-current', 'page');
+                }
+                li.appendChild(a);
+                menu.appendChild(li);
+            }
+            const divider = document.createElement('li');
+            divider.className = 'nav-divider';
+            menu.appendChild(divider);
+            const edition = document.createElement('li');
+            const editionLink = document.createElement('a');
+            editionLink.href = 'https://mozhgan91.github.io/vlm4rwd-neurips25-ws/';
+            editionLink.textContent = '2025 Edition';
+            editionLink.className = 'previous-edition-link';
+            editionLink.target = '_blank';
+            editionLink.rel = 'noopener';
+            edition.appendChild(editionLink);
+            menu.appendChild(edition);
+        }
+    }
     // Initialize Vanta.js background effect
 const heroBackground = document.querySelector('#hero-background');
 if (heroBackground && window.VANTA && VANTA.WAVES) {
